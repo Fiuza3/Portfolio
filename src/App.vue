@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import NavegacaoHeader from '@/components/NavegacaoHeader.vue'
 import RodapePrincipal from '@/components/RodapePrincipal.vue'
 </script>
