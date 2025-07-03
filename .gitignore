@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diretórios de dependências
+node_modules
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Arquivos de ambiente
+.env
+.env.*
+!.env.example
+
+# Arquivos de build
+/dist/
+
+# Arquivos de cache
+.cache/
+.temp/
+.nuxt/
+
+# Arquivos de configuração local
+.npmrc
+.yarnrc
+.pnpmrc
+
+# Arquivos de serviço
+emailService.js
