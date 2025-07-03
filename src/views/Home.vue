@@ -3,7 +3,7 @@
     <!-- Seção Hero -->
     <section
       class="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat relative"
-      style="background-image: url('/src/assets/images/background.jpg')"
+      :style="{ backgroundImage: `url(${backgroundImage})` }"
     >
       <div class="absolute inset-0 bg-black/40"></div>
       <div class="container mx-auto px-6 text-center relative z-10">
@@ -144,6 +144,7 @@
 <script setup>
   import { computed } from "vue";
   import { usePortifolioStore } from "@/stores/portifolio";
+  import backgroundImage from '@/assets/images/background.jpg';
 
   const store = usePortifolioStore();
 
