@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300"
+    class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-xl z-50 transition-all duration-300"
   >
     <nav class="container mx-auto px-6 py-4">
       <div class="flex items-center justify-between">

@@ -2,15 +2,17 @@
   <div class="home">
     <!-- Seção Hero -->
     <section
-      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-white"
+      class="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat relative"
+      style="background-image: url('/src/assets/images/background.jpg')"
     >
-      <div class="container mx-auto px-6 text-center">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="container mx-auto px-6 text-center relative z-10">
         <div class="animate-fade-in">
-          <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
             Olá, eu sou
             <span class="text-primary-600">Desenvolvedor</span>
           </h1>
-          <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Desenvolvedor Frontend apaixonado por criar experiências digitais
             incríveis e soluções inovadoras que fazem a diferença.
           </p>
@@ -50,36 +52,28 @@
             :key="projeto.id"
             class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-slide-up"
           >
-            <div
-              class="h-48 bg-gradient-to-r from-primary-400 to-primary-600 flex items-center justify-center"
-            >
-              <span class="text-white text-lg font-semibold">{{
-                projeto.titulo
-              }}</span>
+            <div class="relative h-48 overflow-hidden">
+              <img
+                :src="projeto.imagemUrl"
+                :alt="projeto.titulo"
+                class="w-full h-full object-cover"
+              />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                {{ projeto.titulo }}
-              </h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">{{ projeto.titulo }}</h3>
               <p class="text-gray-600 mb-4">{{ projeto.descricao }}</p>
               <div class="flex flex-wrap gap-2 mb-4">
-                <span
+                <a
                   v-for="tech in projeto.tecnologias"
-                  :key="tech"
-                  class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium"
+                  :key="tech.nome"
+                  :href="tech.url"
+                  target="_blank"
+                  class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-primary-200 transition-colors"
                 >
-                  {{ tech }}
-                </span>
+                  {{ tech.nome }}
+                </a>
               </div>
               <div class="flex gap-4">
-                <a
-                  v-if="projeto.linkDemo"
-                  :href="projeto.linkDemo"
-                  target="_blank"
-                  class="text-primary-600 hover:text-primary-700 font-medium"
-                >
-                  Ver Demo
-                </a>
                 <a
                   :href="projeto.linkGithub"
                   target="_blank"

@@ -73,7 +73,7 @@
           <div class="space-y-2 text-gray-300">
             <p>📧 devfiuza@gmail.com</p>
             <p>📱 (31) 972379038</p>
-            <p>📍 Belo Horzonte, MG</p>
+            <p>📍 Belo Horizonte, MG</p>
           </div>
         </div>
       </div>

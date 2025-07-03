@@ -22,13 +22,6 @@
           </p>
 
           <div class="flex flex-wrap gap-4">
-            <a
-              href="/curriculo-teste.pdf"
-              target="_blank"
-              class="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
-            >
-              Download CV
-            </a>
             <router-link
               to="/contato"
               class="border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors"
@@ -42,21 +35,23 @@
           <div
             class="bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl p-8 text-white"
           >
-            <h3 class="text-2xl font-bold mb-6">Informações Pessoais</h3>
+            <h3 class="text-5xl text-primary-600 font-bold mb-6">
+              Informações Pessoais
+            </h3>
             <div class="space-y-4">
-              <div class="flex items-center">
+              <div class="flex items-center text-gray-600">
                 <span class="w-6 h-6 mr-3">📍</span>
                 <span>Belo Horizonte, MG - Brasil</span>
               </div>
-              <div class="flex items-center">
+              <div class="flex items-center text-gray-600">
                 <span class="w-6 h-6 mr-3">📧</span>
                 <span>devfiuza@gmail.com</span>
               </div>
-              <div class="flex items-center">
+              <div class="flex items-center text-gray-600">
                 <span class="w-6 h-6 mr-3">🎓</span>
                 <span>Análise e Desenvolvimento de Sistemas</span>
               </div>
-              <div class="flex items-center">
+              <div class="flex items-center text-gray-600">
                 <span class="w-6 h-6 mr-3">💼</span>
                 <span>Desenvolvedor Frontend</span>
               </div>
@@ -118,7 +113,7 @@
               </div>
               <div>
                 <h4 class="font-semibold text-gray-900">
-                  Técnico em Eletronica
+                  Técnico em Eletrônica
                 </h4>
                 <p class="text-gray-600">
                   E.E.T.I Professor Fontes - 2019-2022
