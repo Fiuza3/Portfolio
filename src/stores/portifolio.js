@@ -1,9 +1,4 @@
 import { defineStore } from "pinia";
-import projeto1 from '../assets/images/projeto1.jpg';
-import projeto2 from '../assets/images/projeto2.jpg';
-import projeto3 from '../assets/images/projeto3.jpg';
-import projeto4 from '../assets/images/projeto4.jpg';
-import projeto5 from '../assets/images/projeto5.jpg';
 
 export const usePortifolioStore = defineStore("portifolio", {
   state: () => ({
@@ -21,7 +16,7 @@ export const usePortifolioStore = defineStore("portifolio", {
           { nome: "Vite", url: "https://vitejs.dev/" },
           { nome: "Axios", url: "https://axios-http.com/" }
         ],
-        imagemUrl: projeto1,
+        imagemUrl: "/images/projeto1.jpg",
         linkGithub: "https://github.com/Fiuza3/VueTasks",
         destaque: true,
       },
@@ -38,7 +33,7 @@ export const usePortifolioStore = defineStore("portifolio", {
           { nome: "Tailwind CSS", url: "https://tailwindcss.com/" },
           { nome: "Vue Router", url: "https://router.vuejs.org/" }
         ],
-        imagemUrl: projeto2,
+        imagemUrl: "/images/projeto2.jpg",
         linkGithub: "https://github.com/Fiuza3/FZone",
         destaque: true,
       },
@@ -51,7 +46,7 @@ export const usePortifolioStore = defineStore("portifolio", {
           { nome: "Express", url: "https://expressjs.com/" },
           { nome: "JWT", url: "https://jwt.io/" }
         ],
-        imagemUrl: projeto3,
+        imagemUrl: "/images/projeto3.jpg",
         linkGithub: "https://github.com/Fiuza3/API-Restful",
         destaque: false,
       },
@@ -66,7 +61,7 @@ export const usePortifolioStore = defineStore("portifolio", {
           { nome: "Tailwind CSS", url: "https://tailwindcss.com/" },
           { nome: "Vite", url: "https://vitejs.dev/" }
         ],
-        imagemUrl: projeto4,
+        imagemUrl: "/images/projeto4.jpg",
         linkGithub: "https://github.com/Fiuza3/Portfolio",
         destaque: false,
       },
@@ -75,7 +70,7 @@ export const usePortifolioStore = defineStore("portifolio", {
         titulo: "Vazio",
         descricao: '',
         tecnologias: [],
-        imagemUrl: projeto5,
+        imagemUrl: "/images/projeto5.jpg",
         linkGithub: "https://github.com/Fiuza3/",
         destaque: false,
       },
@@ -84,7 +79,7 @@ export const usePortifolioStore = defineStore("portifolio", {
         titulo: "Vazio",
         descricao: '',
         tecnologias: [],
-        imagemUrl: projeto5,
+        imagemUrl: "/images/projeto5.jpg",
         linkGithub: "https://github.com/Fiuza3/",
         destaque: false,
       },

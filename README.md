@@ -10,6 +10,7 @@ Um portfólio moderno e responsivo desenvolvido com Vue 3, JavaScript e Tailwind
 - **SEO Friendly**: Meta tags e estrutura otimizada
 - **Animações**: Transições suaves e efeitos visuais
 - **Formulário de Contato**: Sistema de email funcional com EmailJS
+- **Tecnologias Clicáveis**: Links para documentação oficial das tecnologias
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -25,24 +26,36 @@ Um portfólio moderno e responsivo desenvolvido com Vue 3, JavaScript e Tailwind
 ## 📁 Estrutura do Projeto
 
 ```
-src/
-├── components/          # Componentes reutilizáveis
-│   ├── NavegacaoHeader.vue
-│   └── RodapePrincipal.vue
-├── views/              # Páginas da aplicação
-│   ├── Home.vue
-│   ├── Sobre.vue
-│   ├── Projetos.vue
-│   └── Contato.vue
-├── stores/             # Gerenciamento de estado
-│   └── portifolio.js
-├── router/             # Configuração de rotas
-│   └── index.js
-├── services/           # Serviços externos
-│   └── emailService.js
-├── types/              # Referências de tipos
-│   └── index.js
-└── assets/             # Recursos estáticos
+├── public/              # Arquivos estáticos públicos
+│   └── images/          # Imagens do projeto
+│       ├── background.jpg
+│       ├── projeto1.jpg
+│       └── ...
+├── src/
+│   ├── components/      # Componentes reutilizáveis
+│   │   ├── NavegacaoHeader.vue
+│   │   └── RodapePrincipal.vue
+│   ├── views/           # Páginas da aplicação
+│   │   ├── Home.vue
+│   │   ├── Sobre.vue
+│   │   ├── Projetos.vue
+│   │   └── Contato.vue
+│   ├── stores/          # Gerenciamento de estado
+│   │   └── portifolio.js
+│   ├── router/          # Configuração de rotas
+│   │   └── index.js
+│   ├── services/        # Serviços externos
+│   │   └── emailService.js
+│   ├── types/           # Referências de tipos
+│   │   └── index.js
+│   └── assets/          # Recursos estáticos internos
+│       └── logo/
+├── .gitignore          # Arquivos ignorados pelo Git
+├── index.html          # Página HTML principal
+├── package.json        # Dependências e scripts
+├── tailwind.config.js  # Configuração do Tailwind
+├── vite.config.js      # Configuração do Vite
+└── CONFIGURACAO_EMAIL.md # Guia de configuração do EmailJS
 ```
 
 ## 🚀 Como Executar
@@ -82,7 +95,7 @@ Para personalizar o portfólio:
 2. **Configuração de email**: Configure `src/services/emailService.js`
 3. **Cores**: Modifique `tailwind.config.js`
 4. **Conteúdo**: Atualize os componentes em `src/views/`
-5. **Imagens**: Adicione em `src/assets/images/`
+5. **Imagens**: Adicione em `public/images/`
 
 ## 📧 Configuração do Email
 
@@ -91,6 +104,13 @@ Para ativar o formulário de contato:
 1. Siga o guia em `CONFIGURACAO_EMAIL.md`
 2. Configure sua conta no EmailJS
 3. Atualize as credenciais em `src/services/emailService.js`
+
+## 🌐 Deploy
+
+O projeto está configurado para deploy em plataformas como Vercel, Netlify ou GitHub Pages:
+
+1. **Vercel/Netlify**: Conecte ao repositório e deploy automático
+2. **GitHub Pages**: Execute `npm run build` e faça upload da pasta `dist`
 
 ## 📧 Contato
 
