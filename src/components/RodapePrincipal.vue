@@ -72,7 +72,7 @@
           <h4 class="text-lg font-semibold mb-4">Contato</h4>
           <div class="space-y-2 text-gray-300">
             <p>📧 devfiuza@gmail.com</p>
-            <p>📱 (31) 972379038</p>
+            <p>📱 (31) 97237-9038</p>
             <p>📍 Belo Horizonte, MG</p>
           </div>
         </div>
@@ -88,6 +88,4 @@
   </footer>
 </template>
 
-<script setup>
-  // Componente de rodapé sem lógica adicional necessária
-</script>
+<script setup></script>

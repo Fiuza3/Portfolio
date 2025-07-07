@@ -38,23 +38,34 @@
             <h3 class="text-5xl text-primary-600 font-bold mb-6">
               Informações Pessoais
             </h3>
+            <div class="flex items-center text-gray-600">
+              <span class="w-6 h-6 mr-3">💼</span>
+              <span>Desenvolvedor Frontend</span>
+            </div>
+            <br />
+            <div class="flex items-center text-gray-600">
+              <span class="w-6 h-6 mr-3">📧</span>
+              <span>devfiuza@gmail.com</span>
+            </div>
+            <br />
+            <div class="flex items-center text-gray-600">
+              <span class="w-6 h-6 mr-3">📱</span>
+              <span>(31) 97237-9038</span>
+            </div>
+            <br />
+            <div class="flex items-center text-gray-600">
+              <span class="w-6 h-6 mr-3">🎓</span>
+              <span>Análise e Desenvolvimento de Sistemas</span>
+            </div>
+            <br />
             <div class="space-y-4">
               <div class="flex items-center text-gray-600">
                 <span class="w-6 h-6 mr-3">📍</span>
                 <span>Belo Horizonte, MG - Brasil</span>
               </div>
-              <div class="flex items-center text-gray-600">
-                <span class="w-6 h-6 mr-3">📧</span>
-                <span>devfiuza@gmail.com</span>
-              </div>
-              <div class="flex items-center text-gray-600">
-                <span class="w-6 h-6 mr-3">🎓</span>
-                <span>Análise e Desenvolvimento de Sistemas</span>
-              </div>
-              <div class="flex items-center text-gray-600">
-                <span class="w-6 h-6 mr-3">💼</span>
-                <span>Desenvolvedor Frontend</span>
-              </div>
+              <br />
+              <br />
+              <br />
             </div>
           </div>
         </div>
@@ -128,22 +139,18 @@
             </h3>
             <div class="space-y-4">
               <div>
-                <h4 class="font-semibold text-gray-900">
-                  Vue3.js Certified Developer
-                </h4>
-                <p class="text-gray-600">Vue School - 2023</p>
+                <h4 class="font-semibold text-gray-900">Vue3.js</h4>
+                <p class="text-gray-600">Udemy - 2024</p>
               </div>
               <div>
                 <h4 class="font-semibold text-gray-900">
-                  AWS Cloud Practitioner
+                  JavaScript & Typescript
                 </h4>
-                <p class="text-gray-600">Amazon Web Services - 2023</p>
+                <p class="text-gray-600">Udemy - 2025</p>
               </div>
               <div>
-                <h4 class="font-semibold text-gray-900">
-                  JavaScript Algorithms
-                </h4>
-                <p class="text-gray-600">FreeCodeCamp - 2025</p>
+                <h4 class="font-semibold text-gray-900"></h4>
+                <p class="text-gray-600"></p>
               </div>
             </div>
           </div>

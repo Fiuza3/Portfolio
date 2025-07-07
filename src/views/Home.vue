@@ -10,7 +10,13 @@
         <div class="animate-fade-in">
           <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
             Olá, eu sou
-            <span class="text-primary-600">Desenvolvedor</span>
+            <span class="text-primary-600 inline-block min-w-[280px]">
+              <transition name="fade" mode="out-in">
+                <span :key="palavraAtual" class="animate-fade-in">{{
+                  palavraAtual
+                }}</span>
+              </transition>
+            </span>
           </h1>
           <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Desenvolvedor Frontend apaixonado por criar experiências digitais
@@ -60,7 +66,9 @@
               />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">{{ projeto.titulo }}</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                {{ projeto.titulo }}
+              </h3>
               <p class="text-gray-600 mb-4">{{ projeto.descricao }}</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <a
@@ -142,11 +150,47 @@
 </template>
 
 <script setup>
-  import { computed } from "vue";
+  import { computed, ref, onMounted, onBeforeUnmount } from "vue";
   import { usePortifolioStore } from "@/stores/portifolio";
 
   const store = usePortifolioStore();
+  const palavras = ["Desenvolvedor", "Frontend", "Marcus", "Universitário"];
+  const palavraAtual = ref(palavras[0]);
+  let intervaloId = null;
+  let indiceAtual = 0;
+
+  const alternarPalavra = () => {
+    indiceAtual = (indiceAtual + 1) % palavras.length;
+    palavraAtual.value = palavras[indiceAtual];
+  };
+
+  onMounted(() => {
+    intervaloId = setInterval(alternarPalavra, 2000);
+  });
+
+  onBeforeUnmount(() => {
+    clearInterval(intervaloId);
+  });
 
   const projetosDestaque = computed(() => store.projetosDestaque);
   const habilidadesPorCategoria = computed(() => store.habilidadesPorCategoria);
 </script>
+
+<style scoped>
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.4s ease, transform 0.7s ease;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .fade-enter-to,
+  .fade-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
