@@ -12,54 +12,6 @@
         </p>
       </div>
 
-      <!-- Filtros -->
-      <div class="flex flex-wrap justify-center gap-4 mb-12">
-        <button
-          @click="filtroAtivo = 'todos'"
-          :class="[
-            'px-6 py-2 rounded-full font-medium transition-colors',
-            filtroAtivo === 'todos'
-              ? 'bg-primary-600 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300',
-          ]"
-        >
-          Todos
-        </button>
-        <button
-          @click="filtroAtivo = 'destaque'"
-          :class="[
-            'px-6 py-2 rounded-full font-medium transition-colors',
-            filtroAtivo === 'destaque'
-              ? 'bg-primary-600 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300',
-          ]"
-        >
-          Em Destaque
-        </button>
-        <button
-          @click="filtroAtivo = 'frontend'"
-          :class="[
-            'px-6 py-2 rounded-full font-medium transition-colors',
-            filtroAtivo === 'frontend'
-              ? 'bg-primary-600 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300',
-          ]"
-        >
-          Frontend
-        </button>
-        <button
-          @click="filtroAtivo = 'fullstack'"
-          :class="[
-            'px-6 py-2 rounded-full font-medium transition-colors',
-            filtroAtivo === 'fullstack'
-              ? 'bg-primary-600 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300',
-          ]"
-        >
-          Full Stack
-        </button>
-      </div>
-
       <!-- Grid de Projetos -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div

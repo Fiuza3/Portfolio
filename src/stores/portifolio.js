@@ -16,7 +16,7 @@ export const usePortifolioStore = defineStore("portifolio", {
           { nome: "Vite", url: "https://vitejs.dev/" },
           { nome: "Axios", url: "https://axios-http.com/" }
         ],
-        imagemUrl: "/images/projeto1.jpg",
+        imagemUrl: "/images/VueTasks.png",
         linkGithub: "https://github.com/Fiuza3/VueTasks",
         destaque: true,
       },
@@ -33,25 +33,12 @@ export const usePortifolioStore = defineStore("portifolio", {
           { nome: "Tailwind CSS", url: "https://tailwindcss.com/" },
           { nome: "Vue Router", url: "https://router.vuejs.org/" }
         ],
-        imagemUrl: "/images/projeto2.jpg",
+        imagemUrl: "/images/Fzone.png",
         linkGithub: "https://github.com/Fiuza3/FZone",
         destaque: true,
       },
       {
         id: 3,
-        titulo: "Vazio",
-        descricao: "API robusta com documentação completa.",
-        tecnologias: [
-          { nome: "Node.js", url: "https://nodejs.org/" },
-          { nome: "Express", url: "https://expressjs.com/" },
-          { nome: "JWT", url: "https://jwt.io/" }
-        ],
-        imagemUrl: "/images/projeto3.jpg",
-        linkGithub: "https://github.com/Fiuza3/API-Restful",
-        destaque: false,
-      },
-      {
-        id: 4,
         titulo: "Portifólio Pessoal",
         descricao:
           "Portfólio pessoal desenvolvido com Vue 3, Pinia e Tailwind CSS. Apresenta projetos, habilidades e experiências de forma organizada e responsiva. Inclui animações sutis e design moderno para destacar o trabalho realizado.",
@@ -61,8 +48,17 @@ export const usePortifolioStore = defineStore("portifolio", {
           { nome: "Tailwind CSS", url: "https://tailwindcss.com/" },
           { nome: "Vite", url: "https://vitejs.dev/" }
         ],
-        imagemUrl: "/images/projeto4.jpg",
+        imagemUrl: "/images/Portifolio.png",
         linkGithub: "https://github.com/Fiuza3/Portfolio",
+        destaque: false,
+      },
+      {
+        id: 4,
+        titulo: "Vazio",
+        descricao: "",
+        tecnologias: [],
+        imagemUrl: "/images/Vazio.png",
+        linkGithub: "https://github.com/Fiuza3/API-Restful",
         destaque: false,
       },
       {
@@ -70,7 +66,7 @@ export const usePortifolioStore = defineStore("portifolio", {
         titulo: "Vazio",
         descricao: '',
         tecnologias: [],
-        imagemUrl: "/images/projeto5.jpg",
+        imagemUrl: "/images/Vazio.png",
         linkGithub: "https://github.com/Fiuza3/",
         destaque: false,
       },
@@ -79,7 +75,7 @@ export const usePortifolioStore = defineStore("portifolio", {
         titulo: "Vazio",
         descricao: '',
         tecnologias: [],
-        imagemUrl: "/images/projeto5.jpg",
+        imagemUrl: "/images/Vazio.png",
         linkGithub: "https://github.com/Fiuza3/",
         destaque: false,
       },
