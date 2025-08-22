@@ -1,11 +1,11 @@
 <template>
-  <div class="contato py-20">
+  <div class="contato py-20 bg-gradient-to-b from-primary-950 via-primary-600 to-primary-950">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Entre em <span class="text-primary-600">Contato</span>
+        <h1 class="text-4xl md:text-5xl font-bold text-primary-50 mb-6">
+          Entre em <span class="text-primary-400">Contato</span>
         </h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p class="text-xl text-primary-100 max-w-3xl mx-auto">
           Estou sempre aberto a novas oportunidades e projetos interessantes.
           Vamos conversar sobre como posso ajudar você!
         </p>
@@ -15,11 +15,11 @@
         <!-- Informações de Contato -->
         <div class="space-y-8">
           <div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">
+            <h2 class="text-2xl font-bold text-primary-50 mb-6">
               Informações de Contato
             </h2>
             <div class="space-y-6">
-              <div class="flex items-center p-4 bg-white rounded-lg shadow-md">
+              <div class="flex items-center p-4 bg-primary-50 rounded-lg shadow-md">
                 <div class="bg-primary-100 p-3 rounded-full mr-4">
                   <svg
                     class="w-6 h-6 text-primary-600"
@@ -36,12 +36,12 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900">Email</h3>
-                  <p class="text-gray-600">devfiuza@gmail.com</p>
+                  <h3 class="font-semibold text-primary-50">Email</h3>
+                  <p class="text-primary-50">devfiuza@gmail.com</p>
                 </div>
               </div>
 
-              <div class="flex items-center p-4 bg-white rounded-lg shadow-md">
+              <div class="flex items-center p-4 bg-primary-50 rounded-lg shadow-md">
                 <div class="bg-primary-100 p-3 rounded-full mr-4">
                   <svg
                     class="w-6 h-6 text-primary-600"
@@ -58,12 +58,12 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900">Telefone</h3>
-                  <p class="text-gray-600">(31) 972379038</p>
+                  <h3 class="font-semibold text-primary-50">Telefone</h3>
+                  <p class="text-primary-50">(31) 972379038</p>
                 </div>
               </div>
 
-              <div class="flex items-center p-4 bg-white rounded-lg shadow-md">
+              <div class="flex items-center p-4 bg-primary-50 rounded-lg shadow-md">
                 <div class="bg-primary-100 p-3 rounded-full mr-4">
                   <svg
                     class="w-6 h-6 text-primary-600"
@@ -86,8 +86,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900">Localização</h3>
-                  <p class="text-gray-600">Belo Horizonte, MG - Brasil</p>
+                  <h3 class="font-semibold text-primary-50">Localização</h3>
+                  <p class="text-primary-50">Belo Horizonte, MG - Brasil</p>
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@
 
           <!-- Redes Sociais -->
           <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Redes Sociais</h3>
+            <h3 class="text-xl font-bold text-primary-50 mb-4">Redes Sociais</h3>
             <div class="flex space-x-4">
               <a
                 href="https://github.com/Fiuza3"
@@ -138,7 +138,7 @@
         </div>
 
         <!-- Formulário de Contato -->
-        <div class="bg-white p-8 rounded-xl shadow-lg">
+        <div class="bg-primary-50 p-8 rounded-xl shadow-lg">
           <h2 class="text-2xl font-bold text-gray-900 mb-6">
             Envie uma Mensagem
           </h2>
@@ -282,40 +282,40 @@
 
       <!-- FAQ -->
       <div class="mt-20">
-        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+        <h2 class="text-3xl font-bold text-primary-800 mb-12 text-center">
           Perguntas Frequentes
         </h2>
         <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white p-6 rounded-xl shadow-lg">
-            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+          <div class="bg-primary-50 p-6 rounded-xl shadow-lg">
+            <h3 class="text-lg font-semibold text-primary-50 mb-3">
               Qual é o tempo de resposta?
             </h3>
-            <p class="text-gray-600">
+            <p class="text-primary-50">
               Geralmente respondo em até 24 horas durante dias úteis.
             </p>
           </div>
-          <div class="bg-white p-6 rounded-xl shadow-lg">
-            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+          <div class="bg-primary-50 p-6 rounded-xl shadow-lg">
+            <h3 class="text-lg font-semibold text-primary-50 mb-3">
               Trabalha com projetos remotos?
             </h3>
-            <p class="text-gray-600">
+            <p class="text-primary-50">
               Sim, tenho experiência com trabalho remoto e metodologias ágeis.
             </p>
           </div>
-          <div class="bg-white p-6 rounded-xl shadow-lg">
-            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+          <div class="bg-primary-50 p-6 rounded-xl shadow-lg">
+            <h3 class="text-lg font-semibold text-primary-50 mb-3">
               Quais tipos de projeto aceita?
             </h3>
-            <p class="text-gray-600">
+            <p class="text-primary-50">
               Desenvolvimento web. Projetos de frontend, backend, fullstack e
               consultoria técnica.
             </p>
           </div>
-          <div class="bg-white p-6 rounded-xl shadow-lg">
-            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+          <div class="bg-primary-50 p-6 rounded-xl shadow-lg">
+            <h3 class="text-lg font-semibold text-primary-50 mb-3">
               Fornece orçamentos gratuitos?
             </h3>
-            <p class="text-gray-600">
+            <p class="text-primary-50">
               Sim, análise inicial e orçamento são sempre gratuitos.
             </p>
           </div>
