@@ -5,52 +5,68 @@ export const usePortifolioStore = defineStore("portifolio", {
     projetos: [
       {
         id: 1,
-        titulo: "VueTasks - Gerenciador de Tarefas",
-        descricao:
-          "VueTasks é um app simples de gerenciamento de tarefas com Vue 3 e Node.js. Possui CRUD completo via API REST, banco local e estrutura organizada. Ideal para treinar conceitos fundamentais de frontend, backend e integração fullstack em projetos reais.",
-        tecnologias: [
-          { nome: "Vue3", url: "https://vuejs.org/" },
-          { nome: "Node.js", url: "https://nodejs.org/" },
-          { nome: "SQLite3", url: "https://www.sqlite.org/" },
-          { nome: "Pinia", url: "https://pinia.vuejs.org/" },
-          { nome: "Vite", url: "https://vitejs.dev/" },
-          { nome: "Axios", url: "https://axios-http.com/" }
-        ],
-        imagemUrl: "/images/VueTasks.png",
-        linkGithub: "https://github.com/Fiuza3/VueTasks",
-        destaque: true,
-      },
-      {
-        id: 2,
         titulo: "ERP FZone",
         descricao:
-          "FZone ERP é um sistema simples para gerenciar empresas. Com ele, é possível controlar tarefas, estoque, finanças e funcionários. Utiliza Vue 3, Node.js, MongoDB e Tailwind. Fácil de instalar e usar, ideal para centralizar a gestão de forma prática e eficiente.",
+          "O FZone ERP é uma solução empresarial completa desenvolvida para modernizar a gestão de empresas, especialmente buffets e empresas de eventos. O sistema oferece uma interface intuitiva e funcionalidades robustas para controle total dos processos empresariais.",
         tecnologias: [
-          { nome: "Vue3", url: "https://vuejs.org/" },
-          { nome: "Node.js", url: "https://nodejs.org/" },
+          { nome: "Vue.js", url: "https://vuejs.org/" },
+          { nome: "Vuetify", url: "https://vuetifyjs.com/" },
           { nome: "Pinia", url: "https://pinia.vuejs.org/" },
+          { nome: "Vue Router", url: "https://router.vuejs.org/" },
+          { nome: "Axios", url: "https://axios-http.com/" },
+          { nome: "Node.js", url: "https://nodejs.org/" },
+          { nome: "Express.js", url: "https://expressjs.com/" },
           { nome: "MongoDB", url: "https://www.mongodb.com/" },
-          { nome: "Tailwind CSS", url: "https://tailwindcss.com/" },
-          { nome: "Vue Router", url: "https://router.vuejs.org/" }
+          { nome: "Mongoose", url: "https://mongoosejs.com/" },
+          { nome: "JWT", url: "https://jwt.io/" },
+          { nome: "Bcrypt", url: "https://www.npmjs.com/package/bcrypt" },
+          { nome: "Vite", url: "https://vitejs.dev/" },
+          { nome: "ESLint", url: "https://eslint.org/" },
+          { nome: "Prettier", url: "https://prettier.io/" }
         ],
         imagemUrl: "/images/Fzone.png",
         linkGithub: "https://github.com/Fiuza3/FZone",
         destaque: true,
       },
       {
-        id: 3,
-        titulo: "Portifólio Pessoal",
+        id: 2,
+        titulo: "VueTasks - Gerenciador de Tarefas",
         descricao:
-          "Portfólio pessoal desenvolvido com Vue 3, Pinia e Tailwind CSS. Apresenta projetos, habilidades e experiências de forma organizada e responsiva. Inclui animações sutis e design moderno para destacar o trabalho realizado.",
+          "VueTasks é um app simples de gerenciamento de tarefas com Vue 3 e Node.js. Possui CRUD completo via API REST, banco local e estrutura organizada. Ideal para treinar conceitos fundamentais de frontend, backend e integração fullstack em projetos reais.",
         tecnologias: [
-          { nome: "Vue3", url: "https://vuejs.org/" },
+          { nome: "Vue.js", url: "https://vuejs.org/" },
+          { nome: "Vue Router", url: "https://router.vuejs.org/" },
+          { nome: "Pinia", url: "https://pinia.vuejs.org/" },
+          { nome: "Axios", url: "https://axios-http.com/" },
+          { nome: "Vite", url: "https://vitejs.dev/" },
+          { nome: "Sass", url: "https://sass-lang.com/" },
+          { nome: "Node.js", url: "https://nodejs.org/" },
+          { nome: "Express.js", url: "https://expressjs.com/" },
+          { nome: "SQLite3", url: "https://www.sqlite.org/" },
+          { nome: "CORS", url: "https://www.npmjs.com/package/cors" },
+          { nome: "Nodemon", url: "https://nodemon.io/" }
+        ],
+        imagemUrl: "/images/VueTasks.png",
+        linkGithub: "https://github.com/Fiuza3/VueTasks",
+        destaque: true,
+      },
+      {
+        id: 3,
+        titulo: "Portfólio Pessoal",
+        descricao:
+          "Portfólio moderno e responsivo desenvolvido com Vue 3 e Tailwind CSS. Apresenta projetos, habilidades e experiências de forma elegante, com animações suaves, efeitos de transição e formulário de contato funcional via EmailJS.",
+        tecnologias: [
+          { nome: "Vue.js", url: "https://vuejs.org/" },
+          { nome: "Vue Router", url: "https://router.vuejs.org/" },
           { nome: "Pinia", url: "https://pinia.vuejs.org/" },
           { nome: "Tailwind CSS", url: "https://tailwindcss.com/" },
-          { nome: "Vite", url: "https://vitejs.dev/" }
+          { nome: "Vite", url: "https://vitejs.dev/" },
+          { nome: "EmailJS", url: "https://www.emailjs.com/" },
+          { nome: "PostCSS", url: "https://postcss.org/" }
         ],
         imagemUrl: "/images/Portifolio.png",
         linkGithub: "https://github.com/Fiuza3/Portfolio",
-        destaque: false,
+        destaque: true,
       },
       {
         id: 4,
