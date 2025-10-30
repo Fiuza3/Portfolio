@@ -150,9 +150,9 @@
 
 <script setup>
 	import { computed, ref, onMounted, onBeforeUnmount } from "vue";
-	import { usePortifolioStore } from "@/stores/portifolio";
+	import { usePortfolioStore } from "@/stores/portifolio";
 
-	const store = usePortifolioStore();
+	const store = usePortfolioStore();
 	const palavras = ["Marcus", "Desenvolvedor", "Frontend", "Marcus"];
 	const palavraAtual = ref(palavras[0]);
 	let intervaloId = null;

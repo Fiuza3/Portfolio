@@ -200,9 +200,9 @@
 
 <script setup>
 	import { ref, computed } from "vue";
-	import { usePortifolioStore } from "@/stores/portifolio";
+	import { usePortfolioStore } from "@/stores/portifolio";
 
-	const store = usePortifolioStore();
+	const store = usePortfolioStore();
 	const filtroAtivo = ref("todos");
 	const modalAberto = ref(false);
 	const projetoSelecionado = ref(null);

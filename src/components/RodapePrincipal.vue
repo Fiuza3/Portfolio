@@ -60,6 +60,13 @@
 						</li>
 						<li>
 							<router-link
+								to="/paisagem"
+								class="text-gray-300 hover:text-white transition-colors"
+								>Paisagem</router-link
+							>
+						</li>
+						<li>
+							<router-link
 								to="/contato"
 								class="text-gray-300 hover:text-white transition-colors"
 								>Contato</router-link

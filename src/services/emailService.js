@@ -1,20 +1,40 @@
 import emailjs from '@emailjs/browser'
 
-// Configurações do EmailJS - SUBSTITUA pelos seus dados reais
+// Configurações do EmailJS via variáveis de ambiente
 const EMAIL_CONFIG = {
-  serviceId: 'service_52h8p84',     // Ex: 'service_abc123'
-  templateId: 'template_nnao1g8',   // Ex: 'template_xyz789'
-  publicKey: '0irk_9YGb7uVPBe3S'      // Ex: 'user_123abc456def'
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+}
+
+const validateFormData = (data) => {
+  const required = ['nome', 'email', 'assunto', 'mensagem']
+  const missing = required.filter(field => !data[field]?.trim())
+  
+  if (missing.length > 0) {
+    throw new Error(`Campos obrigatórios: ${missing.join(', ')}`)
+  }
+  
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(data.email)) {
+    throw new Error('Email inválido')
+  }
 }
 
 export const enviarEmailContato = async (dadosFormulario) => {
   try {
+    validateFormData(dadosFormulario)
+    
+    if (!EMAIL_CONFIG.serviceId || !EMAIL_CONFIG.templateId || !EMAIL_CONFIG.publicKey) {
+      throw new Error('Configuração EmailJS incompleta')
+    }
+
     const templateParams = {
       from_name: dadosFormulario.nome,
       from_email: dadosFormulario.email,
       subject: dadosFormulario.assunto,
       message: dadosFormulario.mensagem,
-      to_name: 'Marcus Fiuza', // Seu nome aqui
+      to_name: 'Marcus Fiuza'
     }
 
     const response = await emailjs.send(
@@ -24,11 +44,15 @@ export const enviarEmailContato = async (dadosFormulario) => {
       EMAIL_CONFIG.publicKey
     )
 
-    console.log('Email enviado com sucesso:', response)
+    // Log sanitizado sem dados sensíveis
+    console.log('Email enviado com sucesso:', {
+      status: response.status,
+      timestamp: new Date().toISOString()
+    })
     return { success: true, message: 'Email enviado com sucesso!' }
 
   } catch (error) {
-    console.error('Erro ao enviar email:', error)
+    console.error('Erro ao enviar email:', error.message)
     return {
       success: false,
       message: 'Erro ao enviar email. Tente novamente.'

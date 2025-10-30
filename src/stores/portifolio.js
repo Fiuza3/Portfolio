@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-export const usePortifolioStore = defineStore("portifolio", {
+export const usePortfolioStore = defineStore("portfolio", {
   state: () => ({
     projetos: [
       {

@@ -193,8 +193,8 @@
 </template>
 
 <script setup>
-	import { usePortifolioStore } from "@/stores/portifolio";
+	import { usePortfolioStore } from "@/stores/portifolio";
 
-	const store = usePortifolioStore();
+	const store = usePortfolioStore();
 	const { experiencias } = store;
 </script>
