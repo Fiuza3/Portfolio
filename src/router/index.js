@@ -1,68 +1,33 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Home from '@/views/Home.vue'
+import Projects from '@/views/Projects.vue'
+import Contact from '@/views/Contact.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'home',
-      component: () => import('@/views/Home.vue'),
+      component: Home,
       meta: {
-        title: 'Início - Marcus Fiuza | Desenvolvedor Frontend',
-        description: 'Portfólio profissional de Marcus Fiuza, desenvolvedor frontend especializado em Vue.js'
-      }
-    },
-    {
-      path: '/sobre',
-      name: 'sobre',
-      component: () => import('@/views/Sobre.vue'),
-      meta: {
-        title: 'Sobre - Marcus Fiuza',
-        description: 'Conheça minha trajetória profissional e experiências'
+        title: 'Home | Portfólio'
       }
     },
     {
       path: '/projetos',
-      name: 'projetos',
-      component: () => import('@/views/Projetos.vue'),
+      name: 'projects',
+      component: Projects,
       meta: {
-        title: 'Projetos - Marcus Fiuza',
-        description: 'Portfólio de projetos desenvolvidos com Vue.js, Node.js e outras tecnologias'
+        title: 'Projetos | Portfólio'
       }
     },
     {
       path: '/contato',
-      name: 'contato',
-      component: () => import('@/views/Contato.vue'),
+      name: 'contact',
+      component: Contact,
       meta: {
-        title: 'Contato - Marcus Fiuza',
-        description: 'Entre em contato para projetos e oportunidades'
-      }
-    },
-    {
-      path: '/servicos',
-      name: 'servicos',
-      component: () => import('@/views/Servicos.vue'),
-      meta: {
-        title: 'Serviços - Marcus Fiuza',
-        description: 'Serviços de desenvolvimento frontend e consultoria'
-      }
-    },
-    {
-      path: '/paisagem',
-      name: 'paisagem',
-      component: () => import('@/views/Paisagem.vue'),
-      meta: {
-        title: 'Paisagem Animada - Marcus Fiuza',
-        description: 'Demonstração de animações com scroll e parallax'
-      }
-    },
-    {
-      path: '/:pathMatch(.*)*',
-      name: 'NotFound',
-      component: () => import('@/views/NotFound.vue'),
-      meta: {
-        title: 'Página não encontrada - Marcus Fiuza'
+        title: 'Contato | Portfólio'
       }
     }
   ],
@@ -70,19 +35,14 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition
     } else {
-      return { top: 0 }
+      return { top: 0, behavior: 'smooth' }
     }
   }
 })
 
-// Meta tags dinâmicas
-router.beforeEach((to) => {
-  document.title = to.meta.title || 'Marcus Fiuza - Desenvolvedor Frontend'
-  
-  const description = document.querySelector('meta[name="description"]')
-  if (description && to.meta.description) {
-    description.setAttribute('content', to.meta.description)
-  }
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'Portfólio'
+  next()
 })
 
 export default router

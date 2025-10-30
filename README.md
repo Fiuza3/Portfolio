@@ -1,127 +1,160 @@
-# 🚀 Portfólio Profissional
+# 🚀 Portfólio Marcus Fiuza
 
-Um portfólio moderno e responsivo desenvolvido com Vue 3, JavaScript e Tailwind CSS.
+Portfólio profissional desenvolvido com Vue 3, showcasing projetos, habilidades e experiência como Desenvolvedor Full Stack.
 
 ## ✨ Características
 
 - **Design Moderno**: Interface limpa e profissional
-- **Responsivo**: Funciona perfeitamente em todos os dispositivos
-- **Performance**: Otimizado com Vite e lazy loading
-- **SEO Friendly**: Meta tags e estrutura otimizada
-- **Animações**: Transições suaves e efeitos visuais
-- **Formulário de Contato**: Sistema de email funcional com EmailJS
-- **Tecnologias Clicáveis**: Links para documentação oficial das tecnologias
+- **Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
+- **Modo Escuro**: Alternância entre tema claro e escuro
+- **Animações Suaves**: Transições e efeitos visuais elegantes
+- **SEO Otimizado**: Meta tags e estrutura otimizada para buscadores
+- **Performance**: Carregamento rápido e otimizado
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias
 
-- **Vue 3** - Framework JavaScript progressivo
-- **JavaScript** - Linguagem de programação moderna
-- **Vite** - Build tool rápido e moderno
-- **Vue Router** - Roteamento oficial do Vue
+- **Vue 3** - Framework JavaScript
 - **Pinia** - Gerenciamento de estado
+- **Vue Router** - Roteamento SPA
 - **Tailwind CSS** - Framework CSS utilitário
-- **EmailJS** - Serviço de envio de emails
-- **PostCSS** - Processador CSS
+- **Vite** - Build tool moderna
+- **AOS** - Animações on scroll
 
 ## 📁 Estrutura do Projeto
 
 ```
-├── public/              # Arquivos estáticos públicos
-│   └── images/          # Imagens do projeto
-│       ├── background.jpg
-│       ├── projeto1.jpg
-│       └── ...
-├── src/
-│   ├── components/      # Componentes reutilizáveis
-│   │   ├── NavegacaoHeader.vue
-│   │   └── RodapePrincipal.vue
-│   ├── views/           # Páginas da aplicação
-│   │   ├── Home.vue
-│   │   ├── Sobre.vue
-│   │   ├── Projetos.vue
-│   │   └── Contato.vue
-│   ├── stores/          # Gerenciamento de estado
-│   │   └── portifolio.js
-│   ├── router/          # Configuração de rotas
-│   │   └── index.js
-│   ├── services/        # Serviços externos
-│   │   └── emailService.js
-│   ├── types/           # Referências de tipos
-│   │   └── index.js
-│   └── assets/          # Recursos estáticos internos
-│       └── logo/
-├── .gitignore          # Arquivos ignorados pelo Git
-├── index.html          # Página HTML principal
-├── package.json        # Dependências e scripts
-├── tailwind.config.js  # Configuração do Tailwind
-├── vite.config.js      # Configuração do Vite
-└── CONFIGURACAO_EMAIL.md # Guia de configuração do EmailJS
+src/
+├── components/          # Componentes reutilizáveis
+├── views/              # Páginas principais
+├── stores/             # Gerenciamento de estado
+│   └── data/          # Dados separados por categoria
+├── services/          # Serviços e APIs
+├── router/            # Configuração de rotas
+└── style.css          # Estilos globais
 ```
 
 ## 🚀 Como Executar
 
-1. **Instalar dependências:**
-   ```bash
-   npm install
-   ```
+### Pré-requisitos
+- Node.js 16+ 
+- npm ou yarn
 
-2. **Executar em desenvolvimento:**
-   ```bash
-   npm run dev
-   ```
+### Instalação
+```bash
+# Clone o repositório
+git clone https://github.com/Fiuza3/Portfolio.git
 
-3. **Build para produção:**
-   ```bash
-   npm run build
-   ```
+# Entre na pasta
+cd Portfolio/PV2
 
-4. **Preview da build:**
-   ```bash
-   npm run preview
-   ```
+# Instale as dependências
+npm install
 
-## 📱 Páginas
+# Execute em desenvolvimento
+npm run dev
+```
 
-- **Home**: Apresentação pessoal, projetos em destaque e habilidades
-- **Sobre**: Informações detalhadas, experiência e formação
-- **Projetos**: Portfólio completo com filtros e modal de detalhes
-- **Contato**: Formulário funcional com envio de email via EmailJS
+### Build para Produção
+```bash
+# Gerar build otimizado
+npm run build
+
+# Preview do build
+npm run preview
+```
+
+## 📧 Configuração do Email (Opcional)
+
+Para o formulário de contato funcionar, crie o arquivo `src/services/emailService.js`:
+
+```javascript
+// src/services/emailService.js
+export default {
+  validateForm(form) {
+    const errors = {}
+    
+    if (!form.name.trim()) errors.name = 'Nome é obrigatório'
+    if (!form.email.trim()) errors.email = 'Email é obrigatório'
+    if (!form.subject.trim()) errors.subject = 'Assunto é obrigatório'
+    if (!form.message.trim()) errors.message = 'Mensagem é obrigatória'
+    
+    return {
+      isValid: Object.keys(errors).length === 0,
+      errors
+    }
+  },
+  
+  async sendEmail(formData) {
+    // Implementar integração com serviço de email
+    // Ex: EmailJS, Formspree, Netlify Forms, etc.
+    
+    try {
+      // Simular envio por enquanto
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      
+      return {
+        success: true,
+        message: 'Email enviado com sucesso!'
+      }
+    } catch (error) {
+      return {
+        success: false,
+        message: 'Erro ao enviar email'
+      }
+    }
+  }
+}
+```
 
 ## 🎨 Personalização
 
-Para personalizar o portfólio:
+### Dados Pessoais
+Edite os arquivos em `src/stores/data/`:
+- `personalInfo.js` - Informações pessoais e redes sociais
+- `projects.js` - Seus projetos
+- `skills.js` - Habilidades técnicas
+- `experience.js` - Experiência profissional
+- `education.js` - Formação acadêmica
 
-1. **Dados pessoais**: Edite `src/stores/portifolio.js`
-2. **Configuração de email**: Configure `src/services/emailService.js`
-3. **Cores**: Modifique `tailwind.config.js`
-4. **Conteúdo**: Atualize os componentes em `src/views/`
-5. **Imagens**: Adicione em `public/images/`
+### Cores e Tema
+Personalize as cores em `tailwind.config.js`:
+```javascript
+theme: {
+  extend: {
+    colors: {
+      primary: { /* suas cores */ },
+      secondary: { /* suas cores */ }
+    }
+  }
+}
+```
 
-## 📧 Configuração do Email
+## 📱 Seções
 
-Para ativar o formulário de contato:
-
-1. Siga o guia em `CONFIGURACAO_EMAIL.md`
-2. Configure sua conta no EmailJS
-3. Atualize as credenciais em `src/services/emailService.js`
+- **Home**: Apresentação pessoal e destaques
+- **Projetos**: Galeria de projetos com filtros
+- **Contato**: Formulário de contato funcional
+- **Demo ERP**: Demonstração do sistema FZone
 
 ## 🌐 Deploy
 
-O projeto está configurado para deploy em plataformas como Vercel, Netlify ou GitHub Pages:
-
-1. **Vercel/Netlify**: Conecte ao repositório e deploy automático
-2. **GitHub Pages**: Execute `npm run build` e faça upload da pasta `dist`
-
-## 📧 Contato
-
-- Email: devfiuza@gmail.com
-- LinkedIn: [linkedin.com/in/devfiuza](https://linkedin.com/in/devfiuza)
-- GitHub: [github.com/Fiuza3](https://github.com/Fiuza3)
+O projeto está pronto para deploy em:
+- **Vercel**: `vercel --prod`
+- **Netlify**: Arraste a pasta `dist/` 
+- **GitHub Pages**: Configure o workflow
+- **Firebase Hosting**: `firebase deploy`
 
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
+## 👨‍💻 Autor
+
+**Marcus Fiuza**
+- GitHub: [@Fiuza3](https://github.com/Fiuza3)
+- LinkedIn: [devfiuza](https://linkedin.com/in/devfiuza)
+- Email: devfiuza@gmail.com
+
 ---
 
-Desenvolvido com ❤️ usando Vue 3 e JavaScript
+⭐ Se este projeto te ajudou, deixe uma estrela no repositório!

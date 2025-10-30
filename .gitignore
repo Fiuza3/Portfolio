@@ -7,41 +7,41 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Diretórios de dependências
 node_modules
-.DS_Store
 dist
 dist-ssr
-coverage
 *.local
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
+.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# Arquivos de ambiente
+# Sensitive files
+src/services/emailService.js
+
+# Environment variables
 .env
-.env.*
-!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Arquivos de build
-/dist/
+# Build outputs
+build/
+out/
 
-# Arquivos de cache
+# Cache
 .cache/
-.temp/
-.nuxt/
+.parcel-cache/
 
-# Arquivos de configuração local
-.npmrc
-.yarnrc
-.pnpmrc
-
-# Arquivos de serviço
-emailService.js
+# OS generated files
+Thumbs.db
+.DS_Store
+CONFIGURACAO_EMAIL.md
